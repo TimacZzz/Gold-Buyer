@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
             const goldPurchased = (amount / goldPrice).toFixed(4);
             const date = new Date();
             const time = date.toLocaleString("sv-SE", { timeZoneName: "short" });
-            investmentSummary.textContent = `You just bought ${goldPurchased} ounces (ozt) for $${amount}. \n You can print out your transaction detail.`
+            investmentSummary.textContent = `You just bought ${goldPurchased} ounces (ozt) for $${amount}. \n You can print out your transaction details in PDF.`
             successDialog.showModal();
             investmentAmount.value = 0;
             fetch("/purchase-record", {
